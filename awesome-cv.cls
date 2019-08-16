@@ -225,7 +225,7 @@
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 %TODO remove coloring % \@sectioncolor #1
@@ -233,11 +233,14 @@
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{black} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{awesome} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{graytext} #1}} 
+\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{black} #1}}
+\newcommand*{\entryschoolstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrydegreestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entryprogramstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -399,7 +402,7 @@
       \@lastname
     }
     \\
-    \vspace{0.4mm}
+    \vspace{4mm}
     \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\}}
     \vspace{0.4mm}
     \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\}}
@@ -422,7 +425,8 @@
               \setbool{isstart}{false} 
             }
             {\@headersocialsep}
-          \href{mailto:\@email}{\faEnvelope\ \@email}
+          \href{mailto:\@email}
+          {\fontsize{1.5em}{1em}\faEnvelope\ \@email}
         }
       \ifthenelse{\isundefined{\@homepage}}
         {}
@@ -432,7 +436,8 @@
               \setbool{istart}{false} 
             }
             {\@headersocialsep}
-          \href{http://\@homepage}{\faHome\ Home: \@homepage}
+          \href{http://\@homepage}
+          {\fontsize{1.5em}{1em}\faHome\ Home: \@homepage}
         }
       \ifthenelse{\isundefined{\@github}}
         {}
@@ -442,7 +447,8 @@
               \setbool{istart}{false} 
             }
             {\@headersocialsep}
-          \href{https://github.com/\@github}{ \faGithubSquare\ Github: \@github}
+          \href{https://github.com/\@github}
+          {\fontsize{1.5em}{1em}\faGithubSquare\ Github: \@github}
         }
       \ifthenelse{\isundefined{\@stackoverflowid}}
         {}
@@ -452,7 +458,8 @@
               \setbool{istart}{false} 
             }
             {\@headersocialsep}
-          \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\ \@stackoverflowname}
+          \href{https://stackoverflow.com/users/\@stackoverflowid}
+          {\fontsize{1.5em}{1em}\faStackOverflow\ \@stackoverflowname}
         }
       \ifthenelse{\isundefined{\@linkedin}}
         {}
@@ -462,7 +469,8 @@
               \setbool{istart}{false} 
             }
             {\@headersocialsep}
-          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\ \@linkedin}
+          \href{https://www.linkedin.com/in/\@linkedin}
+          {\fontsize{1.5em}{1em}\faLinkedinSquare\ \@linkedin}
         }
       \ifthenelse{\isundefined{\@twitter}}
         {}
@@ -472,7 +480,8 @@
               \setbool{istart}{false} 
             }
             {\@headersocialsep}
-          \href{https://twitter.com/\@twitter}{\faTwitter\ \@twitter}
+          \href{https://twitter.com/\@twitter}
+          {\fontsize{1.5em}{1em}\faTwitter\ \@twitter}
         }
       \ifthenelse{\isundefined{\@skype}}
         {}
@@ -531,19 +540,20 @@
   \begin{center}
 }{
   \end{center}
+  \vspace*{-1ex}
 }
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{
-\vspace*{-2mm}
+\vspace*{-2ex}\hspace*{0em}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{17cm}}{\descriptionstyle{#5}} \\
+      {\entrypositionstyle{#1} -- \entrytitlestyle{#2} & \entrydatestyle{#4} \\
+       & \entrylocationstyle{#3} \\}
+    \multicolumn{2}{L{17cm}}{\vspace*{-2.5ex}\descriptionstyle{#5}} \\
   \end{tabular*}
 }
 % Define an entry of cv information
@@ -560,34 +570,29 @@
   \end{tabular*}
   \\\\
 }
-% {\normalsize University of Wisconsin, Madison \scriptsize --- 2015--2019}
-% {\regcol{\normalsize Computer Science (Honors), B.S.}}
-% {something here}
-% {something else}
-% {\hspace*{1em} Major GPA: 3.6}
 % custom cvundergrad
 \newcommand*{\cvundergrad}[5]{
   \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
+  \setlength{\extrarowheight}{2pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
-    \entrytitlestyle{#1}  \\
-    \entrypositionstyle{#2} \\
-    \hspace*{1em}\entrypositionstyle{#3}  \\
-    \hspace*{1em}\entrypositionstyle{#4}  \\
-    \hspace*{1em}\entrypositionstyle{#5}  \\
+    \hspace*{2.32ex}\entryschoolstyle{#1}  \\
+    \hspace*{2.32ex}\entrydegreestyle{\color{awesome} #2} \\
+    \hspace*{2em}\entryprogramstyle{#3}  \\
+    \hspace*{2em}\entryprogramstyle{#4}  \\
+    \hspace*{2em}\entryprogramstyle{#5}  \\
   \end{tabular*}
-  \\\\
+  \\
 }
 % custom cvgrad
 \newcommand*{\cvgrad}[3]{
   \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
+  \setlength{\extrarowheight}{2pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
-    \entrytitlestyle{#1}  \\
-    \entrypositionstyle{#2} \\
-    \hspace*{1em}\entrypositionstyle{#3} \vspace*{0.5ex} \\
+    \hspace*{2.32ex}\entryschoolstyle{#1}  \\
+    \hspace*{2.32ex}\entrydegreestyle{\color{awesome} #2} \\
+    \hspace*{2em}\entryprogramstyle{#3} \vspace*{0.5ex} \\
   \end{tabular*} 
-  \\\\
+  \\
 }
 
 % Define an environment for cvsubentry
@@ -624,6 +629,25 @@
     \end{tabular*}
   \end{center}
 }
+
+% Define an environment for techincalskills
+\newenvironment{technicalskills}{
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular*}{\textwidth}{@{\hskip 1em} l @{\hskip 1em} l }
+}{ 
+    \end{tabular*}
+    \end{center}
+    \vspace*{-1ex}
+}
+
+% Define a technical skill
+% Usage: \techskill{<skill category>}{<skills>}
+\newcommand{\techskill}[2]{
+    \fontsize{11pt}{1em}\skilltypestyle{#1} &
+    \fontsize{11pt}{1em}\skillsetstyle{#2} \\
+}
+
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{
@@ -644,22 +668,44 @@
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{
-	\skilltypestyle{#1} & \skillsetstyle{#2} 
-  \\
+	\skilltypestyle{#1} & \skillsetstyle{#2}  \\
 }
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{
   \vspace{-4mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{itemize}[leftmargin=2ex, nosep, itemindent=1em, itemsep=0.5mm]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\bullet}
 }{
   \end{itemize}
   \end{justify}
-  \vspace{-2mm}
+  \vspace{-1em}
 }
+
+\newenvironment{skills}{
+    \fontsize{11pt}{1em}
+    \begin{justify}
+    \begin{itemize}[itemsep=-1ex, leftmargin=0em, label={}]
+}{
+    \end{itemize}  
+    \end{justify}
+}
+\newcommand{\skill}[2]{ \item \skilltypestyle{#1} \ \skillsetstyle{#2} \hfill}
+
+\newenvironment{projects}{
+    \begin{itemize}[label={}, itemsep=-1mm, itemindent=-7mm]
+}{
+    \end{itemize}
+}
+
+% PROJECT arguments: title, technology used, description, url, link 
+\newcommand{\project}[5]
+{\fontsize{11pt}{1em}\bodyfont
+\item\textbf{\href{#4}{#1}} -- {\textit{\color{awesome}#2}} \\
+\hspace*{-1em} #3 \textbf{\href{#4}{\textit{#5}}}}
+
 
 
 %-------------------------------------------------------------------------------

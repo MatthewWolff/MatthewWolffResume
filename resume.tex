@@ -7,7 +7,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Themes: Awesome-CV
 \documentclass[10pt, letterpaper]{awesome-cv}
-\geometry{left=0.65in, right=0.65in, top=0.3in, bottom=0.5in, footskip=0.15in}
+\geometry{left=0.65in, right=0.65in, top=0.5in, bottom=0.5in, footskip=0.15in}
 
 \usepackage{anyfontsize}
 %%% Override color
@@ -31,17 +31,6 @@
 \colorlet{awesome}{\col}
 \newcommand{\altcol}{\textcolor{\col!50!black!90!}}
 \newcommand{\regcol}{\textcolor{\col}}
-% LAB arguments: department, PI
-\newcommand{\lab}[1]{- \scriptsize \textit{#1}}
-% PROJECT arguments: title, technology used, description
-\newcommand{\project}[3]
-{\normalsize \textbf{#1} -- \small\regcol{#2}\\\hspace*{-1em}{#3}}
-% SKILL arguments:
-\newcommand{\skill}[2]
-{\skilltypestyle{#1} \ \skillsetstyle{#2}}
-% AWARD 
-\newcommand{\award}[2]
-{\skilltypestyle{#1} \ifthenelse{\isempty{#2}}{}{\textit{(#2)}}\\}
 
 % overwrite the forced font size for SKILL
 \renewcommand*{\skilltypestyle}[1]{{\bodyfont\bfseries\color{darktext} #1}}
@@ -67,10 +56,10 @@
 \homepage{wolff.sh}
 \github{MatthewWolff}
 \linkedin{theMatthewWolff}
-\twitter{MarkovChainer}
+% \twitter{MarkovChainer}
 
 %%% Optionals
-\position{Undergraduate{\enskip\cdotp\enskip}Researcher}
+% \position{Undergraduate{\enskip\cdotp\enskip}Researcher}
 % \quote{``Make the change that you want to see in the world."}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,193 +73,157 @@
 
 \begin{document}
 \makecvheader
-\vspace*{-4mm}
-\begin{minipage}[t]{0.5\textwidth}
-    \cvsection{Education}
+% \begin{minipage}[t]{0.5\textwidth}
+\cvsection{Education}
+\begin{cventries}
     \cvgrad
-        {Carnegie Mellon University \scriptsize --- 2019--2021}
-        {\regcol{Graduate (GPA: TBD)}}
-        {Biological Computation, M.S.}
+        {Carnegie Mellon University --- \normalsize{2019--2021}}
+        {Master of Science}
+        {Computational Biology}
     \cvundergrad
-        {University of Wisconsin, Madison \scriptsize --- 2015--2019}
-        {\regcol{Undergraduate (GPA: 3.6)}}
-        {Computer Science, B.S.}
-        {Genetics \& Genomics, B.S.}
+        {University of Wisconsin, Madison --- \normalsize{2015--2019}}
+        {Bachelor of Science (GPA: 3.6)}
+        {Computer Science, Major}
+        {Genetics \& Genomics, Major}
         {Applied Mathematics, Minor}
-    % \cvedu
-    %     {\regcol{\normalsize Computer Science (Honors), B.S.}}
-    %     {\normalsize University of Wisconsin, Madison {\scriptsize --- 2015--2020}}{}{}
-    %     {\hspace*{1em}Major GPA: 3.6}
-    % \cvedu
-    %     {\normalsize\regcol{Genetics \& Genomics (Honors, in Research), B.S.}}
-    %     {}{}{}
-    %     {\hspace*{1em}Major GPA: 3.7}
-    % \cvedu
-    %     {\normalsize\regcol{Applied Mathematics, Minor }}
-    %     {}{}{}
-    %     {\vspace*{-1em}}     
-\end{minipage}
-\begin{minipage}[t]{0.5\textwidth}
-    \cvsection{Key Courses}
-    \vspace*{4mm}
-    \begin{cvitems}\small\bodyfont
-        \setlength{\itemindent}{1em}
-        \setlength{\itemsep}{1mm}
-        % \item{ Comp Sci 744: Big Data Systems}
-        % \item{ Genetics 633: Population Genetics }
-        \item{ Comp Sci 639: Data Management for Data Science}
-        \item{ Comp Sci 576: Introduction to Bioinformatics }
-        \item{ Comp Sci 540: Introduction to Artificial Intelligence }
-        \item{ Comp Sci 577: Introduction to Algorithms}
-        \item{ Comp Sci 564: Database Management Systems }
-        \item{ Math 443: Applied Linear Algebra }
-        % \item{ Math 320: Linear Algebra with Differential Equations }
-        \item{ Math 234: Calculus III: Functions of Variables }
-        \item{ Statistics 309/310: Probability and Mathematical Statistics}
-        %  \item{ Comp Sci 367: Introduction to Data Structures }
-        %  \item{ Genetics 410: Evolutionary Biology }
-        %  \item{ Genetics 548: Comparative \& Functional Genomics }
-        % \item{ Genetics 466: General Genetics [Engels, Laughon]}
-        % \item{ Biochem 501: Intro to Biochemistry }
-        %  \item{ Genetics 633: Population Genetics }
-        %  \item{ Genetics 565: Human Genetics }
-        %  \item{ CS 354: Machine Organization and Programming }
-        % \item{ CS 240: Introduction to Discrete Math }
-    \end{cvitems}
+\end{cventries}
+% \end{minipage}
+% \begin{minipage}[t]{0.5\textwidth}
+%     \cvsection{Key Courses}
+%     \vspace*{4mm}
+%     \begin{cvitems}\small\bodyfont
+%         \setlength{\itemindent}{1em}
+%         \setlength{\itemsep}{1mm}
+%         \item{ Data Management for Data Science}
+%         \item{ Introduction to Bioinformatics }
+%         \item{ Introduction to Artificial Intelligence }
+%         \item{ Introduction to Algorithms}
+%         \item{ Database Management Systems }
+%         \item{ Applied Linear Algebra }
+%         \item{ Linear Algebra with Differential Equations }
+%         \item{ Calculus III: Functions of Variables }
+%         \item{ Probability and Mathematical Statistics}
+%          \item{ Introduction to Data Structures }
+%          \item{ Evolutionary Biology }
+%         \item{ General Genetics [Engels, Laughon]}
+%         \item{ Intro to Biochemistry }
+%          \item{ Population Genetics }
+%          \item{ Machine Organization and Programming }
+%         \item{ Introduction to Discrete Math }
+%     \end{cvitems}
+% \end{minipage}
 
-\end{minipage}
-\vspace*{-8mm}
+\cvsection{Technical Skills}
+\begin{technicalskills}
+    \techskill{\regcol{Languages}}{
+        Python, \ R, \ Shell Script (BASH/ZSH), \ SQL (\textit{MySQL}), \ Scala, \ JavaScript
+    }
+    \techskill{\regcol{Frameworks}}{
+        Spark, \ Boto3, \ Hadoop, \ Keras, \ Flask, \ React
+    }
+    \techskill{\regcol{Technology}}{
+        AWS, \ Git, \ Jupyter, \ Postman, \ Tableau, \ \LaTeX{}, \ Linux, \ HTCondor
+    }
+\end{technicalskills}
+
 \cvsection{Experience}
-\cvsubsection{\regcol{Research}}
-    \cventry{Computational Research Assistant 
-        \lab{Bacteriology, Genetics, Oncology, Population Health}}
+\begin{cventries}
+    \cventry
+        {Data Engineering Intern}
+        {Capital One}
+        {Richmond, VA}
+        {Summer 2019}
+        {\begin{cvitems} 
+            \item Developed Chaos Engineering tool to disrupt AWS ecosystem and evaluate resilience via regression testing 
+            \item Implemented AWS workflow to divert regional traffic upon failure of services (Lambda/CloudWatch/Route53)
+        \end{cvitems}}
+        
+    \cventry
+        {Computational Research Assistant}
         {University of Wisconsin-Madison}
-        {Madison, WI}{Fall 2015--Spring 2019}
-        {\begin{cvitems} \setlength{\itemindent}{1em}
-            \item Used high-performance computing to characterize local zebra mussel populations over time (\textit{Python}, \textit{BASH})
-            \item Conducted supervised machine learning with RandomForest classification on human data (\textit{R, Java})
+        {Madison, WI}
+        {2015--2019}
+        {\begin{cvitems} 
+            \item Used high-performance computing to characterize local zebra mussel populations over time 
+            \item Conducted supervised machine learning with RandomForest classification on genetic interactions
             \item Performed dimensionality reduction and clustering on metabolomic data from Alzheimer's patients using \textit{R}
+            \item Presented poster on gene-gene and gene-environment interactions at Madison research symposium (2016) 
         \end{cvitems}}
     
-\cvsubsection{\regcol{Vocational}}
-\hspace*{0em}\cventry{Data Engineering Intern}
-    {Capital One}
-    {Richmond, VA}
-    {Summer 2019}
-    {\begin{cvitems} \setlength{\itemindent}{1em}
-        \item Developed Chaos Engineering tool to disrupt AWS ecosystem and evaluate resilience via regression testing \textit{(Python, BASH)}
-        \item Implemented AWS workflow to divert all regional traffic upon critical failure of services (used Lambda/CloudWatch/Route53)
-    \end{cvitems}}
-    \vspace*{-0.7em}
-
-\hspace*{0em}\cventry{Founder, President}
-    {UW Data Science Club}
-    {Madison, WI}
-    {Winter 2017 -- Spring 2019}
-    {\begin{cvitems} \setlength{\itemindent}{1em}
-        \item Organizer and leader for weekly meetings \& workshops on Data Science concepts and skills
-        \item Interfaces with professors, researchers, and companies to facilitate lectures and opportunities for students
-    \end{cvitems}}
-    \vspace*{-0.7em}
-    
-\hspace*{0em}\cventry{Tutor, Peer Mentor}
-    {University of Wisconsin, Computer Sciences Dept.}
-    {Madison, WI}
-    {Spring 2018--Spring 2019}
-    {\begin{cvitems} \setlength{\itemindent}{1em}
-      \item Mentored fellow undergraduates in CS301: Data Programming via leading online discussion and tutoring hours
-      \item Tutored students on object-oriented programming concepts and introductory Data Science in \textit{Java} and \textit{Python}
-    \end{cvitems}}  
-    
-\vspace*{-3mm}
-\hspace*{0em}\cventry{Data Analyst Engineering Intern}
-    {Arity - Predictive Analytics \textit{(AllState)}}
-    {Chicago}
-    {Summer 2018}
-    {\begin{cvitems} \setlength{\itemindent}{1em}
-        \item Built pipeline to monitor incoming data, summarizing, visualizing, and automatically reported findings (\textit{Scala}, \textit{R}, \textit{BASH})
-        \item Induced significant productivity increase by automating Data Science Team tasks with scripts (\textit{BASH}, \textit{Python})
-        \item Used visualizations to detect and inform departments of a critical production error (\textit{Scala}, \textit{R})
-        \end{cvitems}}
-% \hspace*{0em}\cventry{Software Engineering Intern}
-%     {West Bend Mutual Insurance}
-%     {West Bend, WI}
-%     {Summer 2017}
-%     {\begin{cvitems} \setlength{\itemindent}{1em}
-%       \item Designed and implemented user interfaces for web applications \textit{(HTML/CSS, Angular.js)}
-%       \item Migrated obsolete database to new platform via dynamically restructuring \& cleaning old data (\textit{.NET}, \textit{SQL}, \textit{R})
-    % \end{cvitems}}
-
-
-\vspace*{-2mm}    
-\cvsection{Projects \& Programming}
-    \cvsubsection{Projects}
-    \vspace*{-7mm}
-    \begin{itemize}[label={},noitemsep]\bodyfont 
-    \setlength{\itemindent}{-5mm}
-         \item 
-        \project{\href{http://wolff.sh/AniClustering}{AniClustering}}
-        {\textit{R, PCA, Clustering (k-means, GMM), Data Visualization}}
-        {Analytics project focused on making TV recommendations based on show ratings, using PCA and clustering \textbf{(\href{http://wolff.sh/AniClustering}{\textit{wolff.sh/AniClustering}})} }
+    \cventry
+        {Tutor, Peer Mentor}
+        {University of Wisconsin, Computer Sciences Dept.}
+        {Madison, WI}
+        {2018--2019}
+        {\begin{cvitems} 
+          \item Mentored fellow undergraduates in CS301: Data Programming via leading online discussion and tutoring hours
+          \item Tutored students on object-oriented programming concepts and introductory Data Science in \textit{Java} and \textit{Python}
+        \end{cvitems}}  
         
-        \item 
-        \project{\href{http://twitter.com/MarkovChainer}{@MarkovChainer: Twitter Bot}}
-       {\textit{Python, TwitterAPI, N-Gram Natural Language Model, Markov Chains}}
-        {Emulates a certain president's tweeting-style using hidden Markov modeling. Hand-implemented. Peep it at \textbf{\href{http://twitter.com/MarkovChainer}{@MarkovChainer}}}
-        
-        \item 
-        \project{\href{http://wolff.sh/PokeNet}{PokéNetwork}}
-        {\textit{R, Deep Neural Network, Data Processing, Data Visualization}}
-        {A deep neural network that determines with 93\% accuracy the outcome of a Pokémon battle \textbf{(\href{http://wolff.sh/PokeNet}{\textit{wolff.sh/PokeNet}})}}
-       
-    \end{itemize}
-    
-    \vspace*{2mm}
-    \cvsubsection{Programming}
-        \begin{tabular}{@{\hskip 1em} l @{\hskip 1em} l }
-        
-       \skilltypestyle{\regcol{Languages}} &
-        \skillsetstyle{ Python, \ R, \ Shell Script (BASH/ZSH), \ SQL (\textit{MySQL}), \ Scala, \ JavaScript }\\
-        \skilltypestyle{\regcol{Frameworks}} &
-        \skillsetstyle{ Spark, \ Boto3, \ Hadoop, \ Keras, \ Flask, \ React }\\
-        
-        \skilltypestyle{\regcol{Technology}} &
-        \skillsetstyle{ AWS, \ Git, \ Jupyter, \ Postman, \ Tableau, \ \LaTeX{}, \ Linux, \ HTCondor }\\
+    \cventry
+        {Data Analyst Engineering Intern}
+        {Arity \textit{(AllState startup)}}
+        {Chicago, IL}
+        {Summer 2018}
+        {\begin{cvitems} 
+            \item Built pipeline to monitor incoming data, summarizing, visualizing, and automatically reported findings
+            \item Induced significant productivity increase by automating Data Science Team tasks with scripts
+            \item Used visualizations to detect and inform departments of a critical production error
+            \end{cvitems}}
             
-        \end{tabular}
-    % \begin{minipage}[t]{0.4\textwidth}
-    % \cvsubsection{Awards}
-    % \begin{tabular}{| @{\hskip 1em} l @{\hskip 1em} |}
-    %     \award{Eagle Scout Award}{2011}
-    %     \award{National Merit Finalist}{2015}
-    %     \award{Kemper K. Kohl Scholarship}{2015}
-    %     \award{Perry Foundation Scholarship}{2017}
-    % \end{tabular}
-    % \end{minipage}    
-\vspace*{-2mm}
-\cvsection{Leadership, Activities, \& Hackathons}
-\vspace*{-3mm}
-\begin{itemize}[noitemsep, leftmargin=0em, label={}]
-    \item\skill{Founder, UW Data Science Club}{Devoted to exploring topics in Data Science, group \& research projects \textbf{(\href{http://DotDataScience.org}{\textit{DotDataScience.org}})}}
-    
-    
-    \item \skill{Exec Board, Undergraduate Genetics Association}
-    {3-year member, executive officer for networking and inter-club outreach}
-    
-    % \item \skill{Inter-Collegiate Programmer, ICPC}{Top 20\% in state-wide, inter-collegiate competitive programming competition }
-    
-    \item \skill{Hacker, UW Hackathon Club}{Competed internationally at \textit{HackMIT}, \textit{MHacks}, \textit{HackHarvard}, and Canada's \textit{Hack the North}}
-    
-\end{itemize}
+    % \cventry{Software Engineering Intern}
+    %     {West Bend Mutual Insurance}
+    %     {West Bend, WI}
+    %     {Summer 2017}
+    %     {\begin{cvitems} \setlength{\itemindent}{1em}
+    %       \item Designed and implemented user interfaces for web applications \textit{(HTML/CSS, Angular.js)}
+    %       \item Migrated obsolete database to new platform via dynamically restructuring \& cleaning old data (\textit{.NET}, \textit{SQL}, \textit{R})
+    %     \end{cvitems}}
+\end{cventries}
 
-\vspace*{-2mm}
-\cvsection{Service}
-\vspace*{-3mm}
-\begin{itemize}[noitemsep, leftmargin=0em,label={}]
-    \item \skill{Eagle Scout - Boy Scouts of America}
+\cvsection{Projects}
+\begin{projects}
+    \project {AniClustering}
+    {R, PCA, Clustering (k-means, GMM), Data Visualization}
+    {Model that makes TV recommendations based on show ratings, using PCA and clustering}
+    {http://wolff.sh/AniClustering}
+    {(wolff.sh/AniClustering)}
+    
+    \project {@MarkovChainer: Twitter Bot}
+    {Python, TwitterAPI, N-Gram Natural Language Model, Markov Chains}
+    {Emulates a certain president's tweeting-style using from-scratch hidden Markov modeling. Peep it at}
+    {http://twitter.com/MarkovChainer}
+    {@MarkovChainer}
+    
+    \project {PokéNetwork}
+    {R, Deep Neural Network, Data Processing, Data Visualization}
+    {A deep neural network that determines with 93\% accuracy the outcome of a Pokémon battle}
+    {http://wolff.sh/PokeNet}
+    {(wolff.sh/PokeNet)}
+\end{projects}
+    
+\cvsection{Leadership \& Activities}
+\begin{skills}
+    \skill{Founder, UW Data Science Club --
+    (\href{http://DotDataScience.org}{\textit{DotDataScience.org}})\\}
+    {\vspace*{-2.5ex}
+    \begin{itemize}[noitemsep, label=\bullet]
+        \item Formed club devoted to exploring topics in Data Science through guest speakers and group projects
+        \item Organized and led weekly meetings and workshops on Data Science concepts and professional skills
+        \item Interfaced with professors, researchers, and companies to facilitate lectures and opportunities for students
+    \end{itemize}
+    \vspace*{-3.5ex}}
+    
+    \skill{Exec Board, Undergraduate Genetics Association}{3-year member, secretary and club outreach officer }
+    
+    % \skill{Inter-Collegiate Programmer, ICPC}{Top 20\% in state-wide, inter-collegiate competitive programming competition }
+    
+    \skill{Hacker, UW Hackathon Club}{Competed internationally at \textit{HackMIT}, \textit{HackHarvard}, and Canada's \textit{Hack the North}}
+    
+    \skill{Eagle Scout - Boy Scouts of America}
     {60+ merit badges, 3 palms, \& 100+ hours of service and served as Den Leader}
-    \item \skill{Team Lead - Badger Volunteers}
-    {2-year member, volunteer weekly to tutor under-privileged children aged 7 through 15}
-\item \skill{Peer Mentor - Computer Sciences}{Volunteer mentor for fellow undergraduates in lower-level computer science courses}
-\end{itemize}
+    
+    \skill{Team Lead - Badger Volunteers}
+    {2-year member, volunteered weekly to tutor under-privileged children aged 7-15}
+\end{skills}
 \end{document}
