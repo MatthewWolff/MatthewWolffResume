@@ -228,7 +228,7 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-%TODO remove coloring % \@sectioncolor #1
+%NOTE remove coloring % \@sectioncolor #1
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text} #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 
@@ -414,7 +414,7 @@
       \ifthenelse{\isundefined{\@mobile}}
         {}
         {
-          \faMobile\ \@mobile
+          \fontsize{1.75em}{1em} \faMobile\ \@mobile
           \setbool{isstart}{false}
         }
       \ifthenelse{\isundefined{\@email}}
@@ -426,7 +426,7 @@
             }
             {\@headersocialsep}
           \href{mailto:\@email}
-          {\fontsize{1.5em}{1em}\faEnvelope\ \@email}
+          {\fontsize{1.25em}{1em}\faEnvelope\ \@email}
         }
       \ifthenelse{\isundefined{\@homepage}}
         {}
@@ -524,6 +524,12 @@
   \sectionstyle{#1}
   \color{gray}\vhrulefill{0.9pt}
   \par\nobreak\addvspace{1ex}
+}
+\newcommand{\cvsectionline}{
+  \par\vspace*{1.5em}
+  \phantomsection{}
+  \color{gray}\vhrulefill{0.9pt}
+  \par\nobreak\addvspace{1.5em}
 }
 
 % Define a subsection for CV

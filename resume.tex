@@ -8,7 +8,7 @@
 %%% Themes: Awesome-CV
 \documentclass[10pt, letterpaper]{awesome-cv}
 \geometry{left=0.65in, right=0.65in, top=0.5in, bottom=0.5in, footskip=0.15in}
-
+\hyphenpenalty=10000
 \usepackage{anyfontsize}
 %%% Override color
 % Awesome Colors: 
@@ -49,8 +49,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Essentials
 \name{Matthew}{Wolff}
-% \address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 22738, Rep. of KOREA}
-% \mobile{+1 (262) 720-8878} 
+% \address{4500 Centre Avenue, Pittsburgh, PA}
+\mobile{+1 (262) 720-8878} 
 %%% Social
 \email{mwolff@andrew.cmu.edu}
 \homepage{wolff.sh}
@@ -73,7 +73,7 @@
 
 \begin{document}
 \makecvheader
-% \begin{minipage}[t]{0.5\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
 \cvsection{Education}
 \begin{cventries}
     \cvgrad
@@ -87,31 +87,48 @@
         {Genetics \& Genomics, Major}
         {Applied Mathematics, Minor}
 \end{cventries}
-% \end{minipage}
-% \begin{minipage}[t]{0.5\textwidth}
-%     \cvsection{Key Courses}
-%     \vspace*{4mm}
-%     \begin{cvitems}\small\bodyfont
-%         \setlength{\itemindent}{1em}
-%         \setlength{\itemsep}{1mm}
-%         \item{ Data Management for Data Science}
-%         \item{ Introduction to Bioinformatics }
-%         \item{ Introduction to Artificial Intelligence }
-%         \item{ Introduction to Algorithms}
-%         \item{ Database Management Systems }
-%         \item{ Applied Linear Algebra }
-%         \item{ Linear Algebra with Differential Equations }
-%         \item{ Calculus III: Functions of Variables }
-%         \item{ Probability and Mathematical Statistics}
-%          \item{ Introduction to Data Structures }
-%          \item{ Evolutionary Biology }
-%         \item{ General Genetics [Engels, Laughon]}
-%         \item{ Intro to Biochemistry }
-%          \item{ Population Genetics }
-%          \item{ Machine Organization and Programming }
-%         \item{ Introduction to Discrete Math }
-%     \end{cvitems}
-% \end{minipage}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\newcommand{\sep}{\textbar \ }
+\cvsectionline \bodyfont \fontsize{18}{1em}
+\cvsubsection{Relevant Coursework:}
+Machine Learning for Scientists 
+\sep Cloud Computing 
+\sep Advanced Algorithms \& Data Structures 
+\sep Machine Learning with Large Data Sets
+\sep Neural Computation 
+
+\vspace*{2em}
+\cvsubsection{Relevant Coursework:}
+Data Management for Data Science 
+\sep Artificial Intelligence 
+\sep Algorithms 
+\sep Database Management Systems 
+\sep Probability and Mathematical Statistics
+\sep Applied Linear Algebra
+\sep Calculus III
+\end{minipage}
+        % \vspace*{4mm}
+        % \begin{cvitems}\small\bodyfont
+        % \setlength{\itemindent}{1em}
+        % \setlength{\itemsep}{1mm}
+        % \item{ Data Management for Data Science}
+        % \item{ Introduction to Bioinformatics }
+        % \item{ Introduction to Artificial Intelligence }
+        % \item{ Introduction to Algorithms}
+        % \item{ Database Management Systems }
+        % \item{ Applied Linear Algebra }
+        % \item{ Linear Algebra with Differential Equations }
+        % \item{ Calculus III: Functions of Variables }
+        % \item{ Probability and Mathematical Statistics}
+        % \item{ Introduction to Data Structures }
+        % \item{ Evolutionary Biology }
+        % \item{ General Genetics [Engels, Laughon]}
+        % \item{ Intro to Biochemistry }
+        % \item{ Population Genetics }
+        % \item{ Machine Organization and Programming }
+        % \item{ Introduction to Discrete Math }
+        % \end{cvitems}
 
 \cvsection{Technical Skills}
 \begin{technicalskills}
