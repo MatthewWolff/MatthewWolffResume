@@ -710,7 +710,7 @@
 \newcommand{\project}[5]
 {\fontsize{11pt}{1em}\bodyfont
 \item\textbf{\href{#4}{#1}} -- {\textit{\color{awesome}#2}} \\
-\hspace*{-1em} #3 \textbf{\href{#4}{\textit{#5}}}}
+\hspace*{-1em} #3 \textbf{\href{#4}{#5}}}
 
 
 
