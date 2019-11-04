@@ -7,9 +7,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Themes: Awesome-CV
 \documentclass[10pt, letterpaper]{awesome-cv}
-\geometry{left=0.65in, right=0.65in, top=0.5in, bottom=0.5in, footskip=0.15in}
+\geometry{left=0.65in, right=0.65in, top=0.5in, bottom=0.54in, footskip=0.15in}
 \hyphenpenalty=10000
 \usepackage{anyfontsize}
+
 %%% Override color
 % Awesome Colors: 
 % awesome-emerald, awesome-skyblue, 
@@ -27,7 +28,7 @@
 %\definecolor{lighttext}{HTML}{414141}
 
 %%%%%%%% COMMANDS
-\newcommand{\col}{awesome-red}
+\newcommand{\col}{awesome-darknight}
 \colorlet{awesome}{\col}
 \newcommand{\altcol}{\textcolor{\col!50!black!90!}}
 \newcommand{\regcol}{\textcolor{\col}}
@@ -73,11 +74,12 @@
 
 \begin{document}
 \makecvheader
+\vspace*{-2mm}
 \begin{minipage}[t]{0.5\textwidth}
 \cvsection{Education}
 \begin{cventries}
     \cvgrad
-        {Carnegie Mellon University --- \normalsize{2019--2021}}
+        {Carnegie Mellon University --- \normalsize{Expected May 2021}}
         {Master of Science}
         {Computational Biology}
     \cvundergrad
@@ -91,7 +93,7 @@
 \begin{minipage}[t]{0.5\textwidth}
 \newcommand{\sep}{\textbar \ }
 \cvsectionline \bodyfont 
-\cvsubsection{Relevant Coursework:}
+\cvsubsection{\color{black}Relevant Coursework:}
 Machine Learning for Scientists*
 \sep Neural Computation*
 % \sep Cloud Computing*
@@ -100,7 +102,7 @@ Machine Learning for Scientists*
 % \sep Machine Learning with Large Data Sets*
 
 \vspace*{2em}
-\cvsubsection{Relevant Coursework:}
+\cvsubsection{\color{black}Relevant Coursework:}
 Data Management for Data Science 
 \sep Artificial Intelligence 
 \sep Algorithms 
@@ -140,18 +142,27 @@ Data Management for Data Science
 \cvsection{Technical Skills}
 \begin{technicalskills}
     \techskill{\regcol{Languages}}{
-        Python, \ R, \ SQL (\textit{MySQL}), \ Scala, \ Shell Script (BASH), \ Java
+        Python, \ Scala, \ R, \ Java, \ SQL (\textit{MySQL}), \ Shell (BASH)
     }
     \techskill{\regcol{Frameworks}}{
-        Spark, \ Boto3, \ Pytorch, \ Hadoop, \ Keras, \ Flask
+        Hadoop, \ Spark, \ Boto3, \ Flask
     }
     \techskill{\regcol{Technology}}{
-        AWS (\textit{EC2, S3, Lambda}), \ Git, \ Jupyter, \ Postman, \ LaTeX, \ Linux%, \ HTCondor
+        Scikit-Learn, \ Pandas, \ Tidyverse, \ AWS, \ Git, \ LaTeX, \ Linux%, \ HTCondor, \ Jupyter
     }
 \end{technicalskills}
 
 \cvsection{Experience}
 \begin{cventries}
+    \cventry
+        {STEM Ambassador}
+        {Carnegie Mellon University -- Gelfand Center}
+        {Pittsburgh, PA}
+        {Sept. 2019--present}
+        {\begin{cvitems} 
+            \item Lead science experiments and demonstrations, assist in special topic seminars for young children
+            \item Devise and write-up safe and practical science experiments for various age ranges 
+        \end{cvitems}}    
     \cventry
         {Data Engineering Intern}
         {Capital One}
@@ -159,19 +170,19 @@ Data Management for Data Science
         {May--Aug. 2019}
         {\begin{cvitems} 
             \item Developed Chaos Engineering tool to disrupt AWS ecosystem and evaluate resilience via regression testing 
-            \item Implemented AWS workflow to divert regional traffic upon failure of services (Lambda/CloudWatch/Route53)
+            \item Implemented AWS workflow to divert regional traffic upon failure of services (Lambda/CloudWatch/Route53)\\
         \end{cvitems}}
         
     \cventry
         {Computational Research Assistant}
         {University of Wisconsin-Madison}
         {Madison, WI}
-        {Nov. 2015-- Mar. 2019}
+        {Nov. 2015--Mar. 2019}
         {\begin{cvitems} 
-            \item Used high-performance computing to characterize local zebra mussel populations over time 
+            % \item Used high-performance computing to characterize local zebra mussel populations over time 
             \item Conducted supervised machine learning with RandomForest classification on genetic interactions
-            \item Performed dimensionality reduction and clustering on metabolomic data from Alzheimer's patients using \textit{R}
-            \item Presented poster on gene-gene and gene-environment interactions at Madison research symposium (2016) 
+            \item Performed dimensionality reduction and clustering on metabolomic data from Alzheimer's patients
+            \item Presented poster on gene-gene and gene-environment interactions at UW-Madison's research symposium (2016) 
         \end{cvitems}}
     
     \cventry
@@ -224,6 +235,13 @@ Data Management for Data Science
     {A deep neural network that determines with 93\% accuracy the outcome of a Pokémon battle}
     {http://wolff.sh/PokeNet}
     {(wolff.sh/PokeNet)}
+    
+    % \project {AutoPilot}
+    % {C++, Catkin/ROS, Python, Analytical Geometry}
+    % {Designed intelligent path-correction for a robot that switches between human and machine control.}
+    % {}
+    % {}
+    
 \end{projects}
     
 \cvsection{Leadership \& Activities}
@@ -234,22 +252,22 @@ Data Management for Data Science
     \begin{itemize}[noitemsep, label=\bullet]
         \item Formed club devoted to exploring topics in Data Science through guest speakers and group projects
         \item Organized and led weekly meetings and workshops on Data Science concepts and professional skills
-        \item Interfaced with professors, researchers, and companies to facilitate lectures and opportunities for students
+        % \item Interfaced with professors, researchers, and companies to facilitate lectures and opportunities for students
     \end{itemize}
     \vspace*{-3.5ex}}
     
-    \skill{Member, CMU Data Science Club}{Attends talks and workshops on Data Science topics and skills}
+    % \skill{Member, CMU Data Science Club}{Attends talks and workshops on Data Science topics and skills}
     
-    % \skill{Exec Board, Undergraduate Genetics Association}{3-year member, secretary and club outreach officer }
+    \skill{Executive Board, Undergraduate Genetics Association}{3-year member, secretary and club outreach officer }
     
     % \skill{Inter-Collegiate Programmer, ICPC}{Top 20\% in state-wide, inter-collegiate competitive programming competition }
     
-    \skill{Hacker, UW Hackathon Club}{Competed internationally at \textit{HackMIT}, \textit{HackHarvard}, and Canada's \textit{Hack the North}}
-    
-    \skill{Eagle Scout - Boy Scouts of America}
-    {60+ merit badges, 3 palms, \& 100+ hours of service and served as Den Leader}
+    % \skill{Hacker, UW Hackathon Club}{Competed internationally at \textit{HackMIT}, \textit{HackHarvard}, and Canada's \textit{Hack the North}}
     
     \skill{Team Lead - Badger Volunteers}
     {2-year member, volunteered weekly to tutor under-privileged children aged 7-15}
+    
+    \skill{Eagle Scout - Boy Scouts of America}
+    {60+ merit badges, 3 palms, \& 100+ hours of service and served as Den Leader}
 \end{skills}
 \end{document}

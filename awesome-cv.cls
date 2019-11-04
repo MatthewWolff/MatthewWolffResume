@@ -137,7 +137,7 @@
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{0000ff}
 % Text colors
-\definecolor{darktext}{HTML}{414141}
+\definecolor{darktext}{HTML}{282828}
 \colorlet{text}{darkgray}
 \colorlet{graytext}{gray}
 \colorlet{lighttext}{lightgray}
@@ -240,7 +240,7 @@
 \newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{black} #1}}
 \newcommand*{\entryschoolstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\entrydegreestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entryprogramstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entryprogramstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{darktext} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -709,7 +709,7 @@
 % PROJECT arguments: title, technology used, description, url, link 
 \newcommand{\project}[5]
 {\fontsize{11pt}{1em}\bodyfont
-\item\textbf{\href{#4}{#1}} -- {\textit{\color{awesome}#2}} \\
+\item\textbf{\href{#4}{\color{darktext}#1}} -- {\textit{\color{awesome}#2}} \\
 \hspace*{-1em} #3 \textbf{\href{#4}{#5}}}
 
 
