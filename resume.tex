@@ -7,9 +7,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Themes: Awesome-CV
 \documentclass[10pt, letterpaper]{awesome-cv}
-\geometry{left=0.65in, right=0.65in, top=0.5in, bottom=0.54in, footskip=0.15in}
-\hyphenpenalty=10000
-\usepackage{anyfontsize}
+\geometry{left=0.6in, right=0.6in, top=0.5in, bottom=0.54in, footskip=0.15in}
+\input{config}
 
 %%% Override color
 % Awesome Colors: 
@@ -28,10 +27,11 @@
 %\definecolor{lighttext}{HTML}{414141}
 
 %%%%%%%% COMMANDS
-\newcommand{\col}{awesome-darknight}
+\newcommand{\col}{awesome-red}
 \colorlet{awesome}{\col}
 \newcommand{\altcol}{\textcolor{\col!50!black!90!}}
 \newcommand{\regcol}{\textcolor{\col}}
+
 
 % overwrite the forced font size for SKILL
 \renewcommand*{\skilltypestyle}[1]{{\bodyfont\bfseries\color{darktext} #1}}
@@ -53,7 +53,7 @@
 % \address{4500 Centre Avenue, Pittsburgh, PA}
 \mobile{+1 (262) 720-8878} 
 %%% Social
-\email{mwolff@andrew.cmu.edu}
+\email{mwolff@cmu.edu}
 \homepage{wolff.sh}
 \github{MatthewWolff}
 \linkedin{theMatthewWolff}
@@ -91,53 +91,37 @@
 \end{cventries}
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
-\newcommand{\sep}{\textbar \ }
 \cvsectionline \bodyfont 
+\vspace*{-0.5ex}
 \cvsubsection{\color{black}Relevant Coursework:}
-Machine Learning for Scientists*
-\sep Neural Computation*
-% \sep Cloud Computing*
- Computational Medicine
-\sep Adv. Algorithms \& Data Structures
-% \sep Machine Learning with Large Data Sets*
 
-\vspace*{2em}
+\vspace*{-3ex}
+Cloud Computing$^*$
+\sep Intermediate Statistics$^*$
+\sep Machine Learning
+ Algorithms \& Advanced Data Structures
+\sep Neural Computation
+\sep Computational Medicine
+\sep Machine Learning -- Large Data Sets*
+
+\vspace*{1.5em}
 \cvsubsection{\color{black}Relevant Coursework:}
+
+\vspace*{-3ex}
 Data Management for Data Science 
 \sep Artificial Intelligence 
 \sep Algorithms 
 \sep Database Management Systems 
 \sep Probability and Mathematical Statistics
 \sep Applied Linear Algebra
-% \sep Calculus III
+\sep Calculus III
 
 \vspace*{0.5em}
 \begin{flushright}
-    \small * = Spring 2020
+    \small * = Fall 2020
 \end{flushright}
 \vspace*{-2em}
 \end{minipage}
-        % \vspace*{4mm}
-        % \begin{cvitems}\small\bodyfont
-        % \setlength{\itemindent}{1em}
-        % \setlength{\itemsep}{1mm}
-        % \item{ Data Management for Data Science}
-        % \item{ Introduction to Bioinformatics }
-        % \item{ Introduction to Artificial Intelligence }
-        % \item{ Introduction to Algorithms}
-        % \item{ Database Management Systems }
-        % \item{ Applied Linear Algebra }
-        % \item{ Linear Algebra with Differential Equations }
-        % \item{ Calculus III: Functions of Variables }
-        % \item{ Probability and Mathematical Statistics}
-        % \item{ Introduction to Data Structures }
-        % \item{ Evolutionary Biology }
-        % \item{ General Genetics [Engels, Laughon]}
-        % \item{ Intro to Biochemistry }
-        % \item{ Population Genetics }
-        % \item{ Machine Organization and Programming }
-        % \item{ Introduction to Discrete Math }
-        % \end{cvitems}
 
 \cvsection{Technical Skills}
 \begin{technicalskills}
@@ -154,6 +138,17 @@ Data Management for Data Science
 
 \cvsection{Experience}
 \begin{cventries}
+
+    \cventry
+        {Software Engineering Intern}
+        {Amazon.com, Inc.}
+        {Seattle, WA}
+        {June 2020--August 2020}
+        {\begin{cvitems} 
+            \item Incoming intern for summer 2020
+            \item But while you're here, you should try out \lstinline{bash <(curl -fsSL supreme.wolff.sh)}
+        \end{cvitems}}
+        
     % \cventry
     %     {STEM Ambassador}
     %     {Carnegie Mellon University -- Gelfand Center}
@@ -163,6 +158,7 @@ Data Management for Data Science
     %         \item Lead science experiments and demonstrations, assist in special topic seminars for young children
     %         \item Devise and write-up safe and practical science experiments for various age ranges 
     %     \end{cvitems}}       
+    
     \cventry
         {Teaching Assistant, Computer Science Dept.}
         {Carnegie Mellon University}
@@ -172,6 +168,7 @@ Data Management for Data Science
             \item Hold weekly office hours for {\bodyfont\scshape\color{darktext} Algorithms \& Advanced Data Structures}, lead online discussions via Piazza
             \item Devise and write-up answer keys to weekly homework assignments, grade student solutions to assignments 
         \end{cvitems}}    
+        
     \cventry
         {Data Engineering Intern}
         {Capital One}
@@ -179,7 +176,7 @@ Data Management for Data Science
         {May--Aug. 2019}
         {\begin{cvitems} 
             \item Developed Chaos Engineering tool to disrupt AWS ecosystem and evaluate resilience via regression testing 
-            \item Implemented AWS workflow to divert regional traffic upon failure of services (Lambda/CloudWatch/Route53)\\
+            \item Implemented AWS workflow to divert regional traffic upon failure of services (Lambda/CloudWatch/Route53)
         \end{cvitems}}
         
     \cventry
@@ -194,15 +191,15 @@ Data Management for Data Science
             \item Presented poster on gene-gene and gene-environment interactions at UW-Madison's research symposium (2016) 
         \end{cvitems}}
     
-    \cventry
-        {Tutor, Peer Mentor}
-        {University of Wisconsin, Computer Sciences Dept.}
-        {Madison, WI}
-        {Jan. 2018--May 2019}
-        {\begin{cvitems} 
-          \item Mentored fellow undergraduates in CS301: Data Programming via leading online discussion and tutoring hours
-          \item Tutored students on object-oriented programming concepts and introductory Data Science in \textit{Java} and \textit{Python}
-        \end{cvitems}}  
+    % \cventry
+    %     {Tutor, Peer Mentor}
+    %     {University of Wisconsin, Computer Sciences Dept.}
+    %     {Madison, WI}
+    %     {Jan. 2018--May 2019}
+    %     {\begin{cvitems} 
+    %       \item Mentored fellow undergraduates in CS301: Data Programming via leading online discussion and tutoring hours
+    %       \item Tutored students on object-oriented programming concepts and introductory Data Science in \textit{Java} and \textit{Python}
+    %     \end{cvitems}}  
         
     \cventry
         {Data Analyst Engineering Intern}
