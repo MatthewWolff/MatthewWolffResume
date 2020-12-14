@@ -402,9 +402,9 @@
       \@lastname
     }
     \\
-    \vspace{4mm}
+    \vspace{2mm}
     \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\}}
-    \vspace{0.4mm}
+    \vspace{2mm}
     \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\}}
     \vspace{-0.5mm}
     \headersocialstyle{
@@ -554,11 +554,11 @@
 \vspace*{-2ex}\hspace*{0em}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{14.5cm} R{2.5cm}}
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrypositionstyle{#1} -- \entrytitlestyle{#2} & \entrydatestyle{#4} \\
-       & \entrylocationstyle{#3} \\}
+      {\entrypositionstyle{#1} -- \entrytitlestyle{#2}, \entrylocationstyle{#3} & \entrydatestyle{#4}  \\
+       & \\}
     \multicolumn{2}{L{17cm}}{\vspace*{-2.5ex}\descriptionstyle{#5}} \\
   \end{tabular*}
 }
@@ -681,7 +681,7 @@
 \newenvironment{cvitems}{
   \vspace{-4mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, itemindent=1em, itemsep=0.5mm]
+  \begin{itemize}[leftmargin=-2em, nosep, itemindent=-1em, itemsep=0.5mm]
     \setlength{\parskip}{0pt}
     \renewcommand{\labelitemi}{\bullet}
 }{

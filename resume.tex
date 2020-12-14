@@ -60,7 +60,7 @@
 % \twitter{MarkovChainer}
 
 %%% Optionals
-% \position{Undergraduate{\enskip\cdotp\enskip}Researcher}
+\position{Scientist {\enskip\cdotp\enskip}Cloud Engineer}
 % \quote{``Make the change that you want to see in the world."}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,14 +96,14 @@
 \cvsubsection{\color{black}Relevant Coursework:}
 
 \vspace*{-3ex}
-Cloud Computing$^*$
-\sep Computational Data Science$^*$
-\sep Adv. Bioinformatics
-\sep Machine Learning
+Cloud Computing
+\sep Computational Modeling \& Simulation
+\sep Machine Learning -- Large Data Sets* 
+\sep Computational Data Science
+\sep Machine Learning for Scientists
 \sep Algorithms \& Advanced Data Structures
 \sep Neural Computation
-\sep Computational Medicine
-\sep Machine Learning -- Large Data Sets*
+% \sep Computational Medicine
 
 \vspace*{1.5em}
 \cvsubsection{\color{black}Relevant Coursework:}
@@ -119,7 +119,7 @@ Data Management for Data Science
 
 \vspace*{0.5em}
 \begin{flushright}
-    \small * = Fall 2020
+    \small * = Spring 2021
 \end{flushright}
 \vspace*{-2em}
 \end{minipage}
@@ -127,13 +127,13 @@ Data Management for Data Science
 \cvsection{Technical Skills}
 \begin{technicalskills}
     \techskill{\regcol{Languages}}{
-        Python, \ R, \ C++, \ Scala, \ SQL (Oracle), \ NoSQL (MongoDB, HBase), \ Shell (BASH)
+        Python, \ R, \ C++, \ Java, \ Scala, \ SQL (Oracle), \ NoSQL (MongoDB, Neo4J), \ Shell Scripting (BASH)
     }
     \techskill{\regcol{Technology}}{
         Scikit-Learn, \ Kubernetes, \ Tensorflow, \ Tidyverse, \ Git, \ Docker, \ Linux, \ Terraform %, \ HTCondor, \ Jupyter, \ Latex
     }
     \techskill{\regcol{(continued)}}{
-        Spark, \ Hadoop, \ AWS (Elastic MapReduce, \ Sagemaker, \ S3), \ Flask, \ unittest/Mockito
+        Spark, \ Hadoop, \ Azure (ML Studio), \ AWS (Lambda, \ EMR, \ EKS, \ Sagemaker), \ unittest/Mockito
     }
 \end{technicalskills}
 
@@ -144,20 +144,32 @@ Data Management for Data Science
         {Teaching Assistant, Computer Science Dept.}
         {Carnegie Mellon University}
         {Pittsburgh, PA}
-        {January 2020--present}
+        {Jan. 2020--Now}
         {\begin{cvitems} 
-            \item Weekly office hours \& discussions for {\bodyfont\scshape\color{darktext} Algorithms \& Advanced Data Structures} and {\bodyfont\scshape\color{darktext} Intro to Programming} 
-            \item Devise and write-up answer keys to weekly homework assignments, grade student solutions to assignments 
+            \item Automated examination evaluation with auto-grading pipelines; deployed web applications for student use
+            \item Designed and presented workshops on topics like \textit{Git}, using the Unix/Linux command line, and automation via the shell
+            \item Weekly office hours \& discussions for {\bodyfont\scshape\color{darktext} Algorithms \& Advanced Data Structures} and {\bodyfont\scshape\color{darktext} Programming for Scientists} 
+        \end{cvitems}}   
+
+    \cventry
+        {Graduate Cloud Computing Course}
+        {Carnegie Mellon University}
+        {Pittsburgh, PA}
+        {Sept. 2020--Now}
+        {\begin{cvitems} 
+            \item Worked in a team of 2 to create and deploy Twitter analytics service capable of serving 30k queries per second on 1TB of data
+            \item Containerized and deployed frontend/backend/database services on Kubernetes to support fake social media platform
+            \item Designed and implemented cloud solutions on GCP, AWS, and Azure, using MapReduce, NoSQL, and Docker
         \end{cvitems}}   
         
         \cventry
         {Software Engineer Intern -- Graduate Program [CoreAI]}
         {Amazon.com, Inc.}
         {Seattle, WA}
-        {May--August 2020}
+        {May--Aug. 2020}
         {\begin{cvitems} 
-            \item Designed, implemented, \& deployed AWS/Kubernetes-based backend for an internal application to production
-            \item Retrained deep, transfer-learned network with case-insensitive text embeddings to improve model metrics
+            \item Retrained deep, transfer-learned network by using case-insensitive text embeddings to improve model metrics
+            \item Designed, implemented, \& deployed AWS/Kubernetes-based backend for an \textit{Apache Spark} application to production
             \item Integrated new backend with existing front-end, developed multiple new features to enhance UX for scientists
         \end{cvitems}}
         
@@ -177,6 +189,7 @@ Data Management for Data Science
         {Richmond, VA}
         {May--Aug. 2019}
         {\begin{cvitems} 
+            \item Implemented web framework and load-balanced requests to a distributed NoSQL database (Hbase)
             \item Developed Chaos Engineering tool to disrupt AWS ecosystem and evaluate resilience via regression testing 
             \item Implemented AWS workflow to divert regional traffic upon failure of services (Lambda/CloudWatch/Route53)
         \end{cvitems}}
@@ -185,7 +198,7 @@ Data Management for Data Science
         {Computational Research Assistant}
         {University of Wisconsin-Madison}
         {Madison, WI}
-        {Nov. 2015--Mar. 2019}
+        {Sept 2015--2019}
         {\begin{cvitems} 
             % \item Used high-performance computing to characterize local zebra mussel populations over time 
             \item Conducted supervised machine learning with RandomForest classification on genetic interactions
@@ -203,16 +216,16 @@ Data Management for Data Science
     %       \item Tutored students on object-oriented programming concepts and introductory Data Science in \textit{Java} and \textit{Python}
     %     \end{cvitems}}  
         
-    \cventry
-        {Data Analyst Engineering Intern}
-        {Arity \textit{(AllState startup)}}
-        {Chicago, IL}
-        {May--Aug. 2018}
-        {\begin{cvitems} 
-            \item Built pipeline to monitor incoming data, summarizing, visualizing, and automatically reported findings
-            \item Induced significant productivity increase by automating Data Science Team tasks with scripts
-            % \item Used visualizations to detect and inform departments of a critical production error
-            \end{cvitems}}
+    % \cventry
+    %     {Data Analyst Engineering Intern}
+    %     {Arity \textit{(AllState startup)}}
+    %     {Chicago, IL}
+    %     {May--Aug. 2018}
+    %     {\begin{cvitems} 
+    %         \item Built pipeline to monitor incoming data, summarizing, visualizing, and automatically reported findings
+    %         \item Induced significant productivity increase by automating Data Science Team tasks with scripts
+    %         % \item Used visualizations to detect and inform departments of a critical production error
+    %         \end{cvitems}}
             
     % \cventry{Software Engineering Intern}
     %     {West Bend Mutual Insurance}
@@ -226,14 +239,15 @@ Data Management for Data Science
 
 \vspace*{-1ex}
 \cvsection{Projects}
+\vspace*{-2ex}
 \begin{projects}
-    \project {DuolingoAnalysis}
-    {R, Python, Clustering (hierarchical), AdaBoost, RandomForest, Visualization}
-    {Cleaning, Visualizing, and Modeling raw data in order to extract user personas}
-    {http://analysis.wolff.sh}
-    {(analysis.wolff.sh)}   
+    % \project {DuolingoAnalysis}
+    % {R, Python, Clustering (hierarchical), AdaBoost, RandomForest, Visualization}
+    % {Cleaning, Visualizing, and Modeling raw data in order to extract user personas}
+    % {http://analysis.wolff.sh}
+    % {(analysis.wolff.sh)}   
         
-    \project {TwitterScraper \textit{(22 stars)}}
+    \project {TwitterScraper \textit{(33 stars)}}
     {Python, Tweepy, Selenium, BeautifulSoup}
     {Bypass limit on Twitter API tweet retrieval by programmatically scraping the web}
     {http://scraper.wolff.sh}
@@ -251,11 +265,11 @@ Data Management for Data Science
     {http://twitter.com/MarkovChainer}
     {@MarkovChainer}
     
-    % \project {Pneumonia CNN}
-    % {TensorFlow, Transfer learning, Convolutional Neural Network, Python}
-    % {Convolutional Network that can diagnose pneumonia from radiographs with 82\% accuracy}
-    % {http://pneumonia.wolff.sh}
-    % {(pneumonia.wolff.sh)}
+    \project {Pneumonia CNN}
+    {TensorFlow, Transfer learning, Convolutional Neural Network, Python}
+    {Convolutional Network that can diagnose pneumonia from radiographs with 82\% accuracy}
+    {http://pneumonia.wolff.sh}
+    {(pneumonia.wolff.sh)}
     
     % \project {AutoPilot}
     % {C++, Catkin/ROS, Python, Analytical Geometry}
@@ -267,9 +281,10 @@ Data Management for Data Science
 
 \vspace*{-1ex}    
 \cvsection{Leadership \& Activities}
+\vspace*{-2ex}    
 \begin{skills}
     \skill{Founder + President, UW Data Science Club --
-    (\href{http://DotDataScience.org}{\textit{DotDataScience.org}})\\}
+    (\href{http://DotDataScience.org}{\textit{DotDataScience.org}}) [80 active members]\\}
     {\vspace*{-2.5ex}
     \begin{itemize}[noitemsep, label=\bullet]
         \item Formed club devoted to exploring topics in Data Science through guest speakers and group projects
@@ -282,14 +297,14 @@ Data Management for Data Science
     
     \skill{Tutor, Computer Sciences}{Tutored students in computer science topics and languages @ CMU and UW-Madison}
     
-    \skill{Executive Board, Undergraduate Genetics Association}{3-year member, secretary and club outreach officer }
+    % \skill{Executive Board, Undergraduate Genetics Association}{3-year member, secretary and club outreach officer }
     
     % \skill{Inter-Collegiate Programmer, ICPC}{Top 20\% in state-wide, inter-collegiate competitive programming competition }
     
     % \skill{Hacker, UW Hackathon Club}{Competed internationally at \textit{HackMIT}, \textit{HackHarvard}, and Canada's \textit{Hack the North}}
     
-    \skill{Team Lead - Badger Volunteers}
-    {2-year member, volunteered weekly to tutor under-privileged children aged 7-15}
+    % \skill{Team Lead - Badger Volunteers}
+    % {2-year member, volunteered weekly to tutor under-privileged children aged 7-15}
     
     \skill{Eagle Scout - Boy Scouts of America}
     {60+ merit badges, 3 palms, \& 100+ hours of service and served as Den Leader}
