@@ -1,312 +1,117 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Configuration
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Themes: Awesome-CV
-\documentclass[10pt, letterpaper]{awesome-cv}
-\geometry{left=0.6in, right=0.6in, top=0.5in, bottom=0.54in, footskip=0.15in}
-\input{config}
-
-%%% Override color
-% Awesome Colors: 
-% awesome-emerald, awesome-skyblue, 
-% awesome-red, awesome-pink,
-% awesome-orange, awesome-nephritis,
-% awesome-concrete, awesome-darknight
-
-%% Color for highlight
-% Define your custom color if you don't like awesome colors
-%\definecolor{awesome}{HTML}{CA63A8}
-%% Colors for text
-%\definecolor{darktext}{HTML}{414141}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
-%\definecolor{lighttext}{HTML}{414141}
-
-%%%%%%%% COMMANDS
-\newcommand{\col}{awesome-red}
-\colorlet{awesome}{\col}
-\newcommand{\altcol}{\textcolor{\col!50!black!90!}}
-\newcommand{\regcol}{\textcolor{\col}}
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
 
-% overwrite the forced font size for SKILL
-\renewcommand*{\skilltypestyle}[1]{{\bodyfont\bfseries\color{darktext} #1}}
-\renewcommand*{\skillsetstyle}[1]{{\bodyfont\color{text} #1}}
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
 
-%%% Override a directory location for fonts(default: 'fonts/')
-\fontdir[fonts/]
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{3E6D9C}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
-
-%%% Override a separator for social informations in header(default: ' | ')
-% \headersocialsep[\quad\textbar\quad]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Personal Data
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Essentials
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
 \name{Matthew}{Wolff}
-% \address{4500 Centre Avenue, Pittsburgh, PA}
-\mobile{+1 (262) 720-8878} 
-%%% Social
-\email{mwolff@cmu.edu}
+\position{Software Developer{\enskip\cdotp\enskip}Machine Learning Engineer}
+% \address{235, World Cup buk-ro, Mapo-gu, Seoul, 03936, Republic of Korea}
+
+\mobile{(+1) 262-720-8878}
+\email{mwolff@alumni.cmu.edu}
+%\dateofbirth{January 1st, 1970}
 \homepage{wolff.sh}
 \github{MatthewWolff}
 \linkedin{theMatthewWolff}
-% \twitter{MarkovChainer}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
 
-%%% Optionals
-\position{Scientist {\enskip\cdotp\enskip}Cloud Engineer}
-% \quote{``Make the change that you want to see in the world."}
+\quote{
+    Current Software Development Engineer at Amazon.com, Inc. with 3+ years experience, specializing in machine learning infrastructure and cloud engineering. Super nerd who loves Vim, Linux, OS X and enjoys customizing the whole development environment. \\
+    Open to Machine Learning Engineer, Data Scientist, or Software Development Engineer positions.
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Content
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
   {Matthew Wolff ~~~·~~~ \href{http://resume.wolff.sh}{http://resume.wolff.sh}}
   {\thepage}
 
-\begin{document}
-\makecvheader
-\vspace*{-2mm}
-\begin{minipage}[t]{0.5\textwidth}
-\cvsection{Education}
-\begin{cventries}
-    \cvgrad
-        {Carnegie Mellon University --- \normalsize{Expected May 2021}}
-        {Master of Science (GPA: 3.97)}
-        {Computational Biology}
-    \cvundergrad
-        {University of Wisconsin, Madison --- \normalsize{2015--2019}}
-        {Bachelor of Science (GPA: 3.6)}
-        {Computer Science, Major}
-        {Genetics \& Genomics, Major}
-        {Applied Mathematics, Minor}
-\end{cventries}
-\end{minipage}
-\begin{minipage}[t]{0.5\textwidth}
-\cvsectionline \bodyfont 
-\vspace*{-0.5ex}
-\cvsubsection{\color{black}Relevant Coursework:}
 
-\vspace*{-3ex}
-Cloud Computing
-\sep Computational Modeling \& Simulation
-\sep Machine Learning -- Large Data Sets* 
-\sep Computational Data Science
-\sep Machine Learning for Scientists
-\sep Algorithms \& Advanced Data Structures
-\sep Neural Computation
-% \sep Computational Medicine
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\vspace{-4mm}
+% \input{resume/summary.tex}
+\input{resume/experience.tex}
+% \input{resume/honors.tex}
+\input{resume/certificates.tex}
+\input{resume/technical.tex}
+\input{resume/projects.tex}
+% \input{resume/presentation.tex}
+% \input{resume/writing.tex}
+% \input{resume/committees.tex}
+\input{resume/education.tex}
+% \input{resume/extracurricular.tex}
 
-\vspace*{1.5em}
-\cvsubsection{\color{black}Relevant Coursework:}
 
-\vspace*{-3ex}
-Data Management for Data Science 
-\sep Artificial Intelligence 
-\sep Algorithms 
-\sep Database Management Systems 
-\sep Probability and Mathematical Statistics
-\sep Applied Linear Algebra
-\sep Calculus III
-
-\vspace*{0.5em}
-\begin{flushright}
-    \small * = Spring 2021
-\end{flushright}
-\vspace*{-2em}
-\end{minipage}
-
-\cvsection{Technical Skills}
-\begin{technicalskills}
-    \techskill{\regcol{Languages}}{
-        Python, \ R, \ C++, \ Java, \ Scala, \ SQL (Oracle), \ NoSQL (MongoDB, Neo4J), \ Shell Scripting (BASH)
-    }
-    \techskill{\regcol{Technology}}{
-        Scikit-Learn, \ Kubernetes, \ Tensorflow, \ Tidyverse, \ Git, \ Docker, \ Linux, \ Terraform %, \ HTCondor, \ Jupyter, \ Latex
-    }
-    \techskill{\regcol{(continued)}}{
-        Spark, \ Hadoop, \ Azure (ML Studio), \ AWS (Lambda, \ EMR, \ EKS, \ Sagemaker), \ unittest/Mockito
-    }
-\end{technicalskills}
-
-\cvsection{Experience}
-\begin{cventries}
-
-    \cventry
-        {Teaching Assistant, Computer Science Dept.}
-        {Carnegie Mellon University}
-        {Pittsburgh, PA}
-        {Jan. 2020--Now}
-        {\begin{cvitems} 
-            \item Automated examination evaluation with auto-grading pipelines; deployed web applications for student use
-            \item Designed and presented workshops on topics like \textit{Git}, using the Unix/Linux command line, and automation via the shell
-            \item Weekly office hours \& discussions for {\bodyfont\scshape\color{darktext} Algorithms \& Advanced Data Structures} and {\bodyfont\scshape\color{darktext} Programming for Scientists} 
-        \end{cvitems}}   
-
-    \cventry
-        {Graduate Cloud Computing Course}
-        {Carnegie Mellon University}
-        {Pittsburgh, PA}
-        {Sept. 2020--Now}
-        {\begin{cvitems} 
-            \item Worked in a team of 2 to create and deploy Twitter analytics service capable of serving 30k queries per second on 1TB of data
-            \item Containerized and deployed frontend/backend/database services on Kubernetes to support fake social media platform
-            \item Designed and implemented cloud solutions on GCP, AWS, and Azure, using MapReduce, NoSQL, and Docker
-        \end{cvitems}}   
-        
-        \cventry
-        {Software Engineer Intern -- Graduate Program [CoreAI]}
-        {Amazon.com, Inc.}
-        {Seattle, WA}
-        {May--Aug. 2020}
-        {\begin{cvitems} 
-            \item Retrained deep, transfer-learned network by using case-insensitive text embeddings to improve model metrics
-            \item Designed, implemented, \& deployed AWS/Kubernetes-based backend for an \textit{Apache Spark} application to production
-            \item Integrated new backend with existing front-end, developed multiple new features to enhance UX for scientists
-        \end{cvitems}}
-        
-    % \cventry
-    %     {STEM Ambassador}
-    %     {Carnegie Mellon University -- Gelfand Center}
-    %     {Pittsburgh, PA}
-    %     {Sept. 2019--present}
-    %     {\begin{cvitems} 
-    %         \item Lead science experiments and demonstrations, assist in special topic seminars for young children
-    %         \item Devise and write-up safe and practical science experiments for various age ranges 
-    %     \end{cvitems}}       
-    
-    \cventry
-        {Data Engineering Intern}
-        {Capital One}
-        {Richmond, VA}
-        {May--Aug. 2019}
-        {\begin{cvitems} 
-            \item Implemented web framework and load-balanced requests to a distributed NoSQL database (Hbase)
-            \item Developed Chaos Engineering tool to disrupt AWS ecosystem and evaluate resilience via regression testing 
-            \item Implemented AWS workflow to divert regional traffic upon failure of services (Lambda/CloudWatch/Route53)
-        \end{cvitems}}
-        
-    \cventry
-        {Computational Research Assistant}
-        {University of Wisconsin-Madison}
-        {Madison, WI}
-        {Sept 2015--2019}
-        {\begin{cvitems} 
-            % \item Used high-performance computing to characterize local zebra mussel populations over time 
-            \item Conducted supervised machine learning with RandomForest classification on genetic interactions
-            \item Performed dimensionality reduction and clustering on metabolomic data from Alzheimer's patients
-            \item Presented poster on gene-gene and gene-environment interactions at UW-Madison's research symposium (2016) 
-        \end{cvitems}}
-    
-    % \cventry
-    %     {Tutor, Peer Mentor}
-    %     {University of Wisconsin, Computer Sciences Dept.}
-    %     {Madison, WI}
-    %     {Jan. 2018--May 2019}
-    %     {\begin{cvitems} 
-    %       \item Mentored fellow undergraduates in CS301: Data Programming via leading online discussion and tutoring hours
-    %       \item Tutored students on object-oriented programming concepts and introductory Data Science in \textit{Java} and \textit{Python}
-    %     \end{cvitems}}  
-        
-    % \cventry
-    %     {Data Analyst Engineering Intern}
-    %     {Arity \textit{(AllState startup)}}
-    %     {Chicago, IL}
-    %     {May--Aug. 2018}
-    %     {\begin{cvitems} 
-    %         \item Built pipeline to monitor incoming data, summarizing, visualizing, and automatically reported findings
-    %         \item Induced significant productivity increase by automating Data Science Team tasks with scripts
-    %         % \item Used visualizations to detect and inform departments of a critical production error
-    %         \end{cvitems}}
-            
-    % \cventry{Software Engineering Intern}
-    %     {West Bend Mutual Insurance}
-    %     {West Bend, WI}
-    %     {Summer 2017}
-    %     {\begin{cvitems} \setlength{\itemindent}{1em}
-    %       \item Designed and implemented user interfaces for web applications \textit{(HTML/CSS, Angular.js)}
-    %       \item Migrated obsolete database to new platform via dynamically restructuring \& cleaning old data (\textit{.NET}, \textit{SQL}, \textit{R})
-    %     \end{cvitems}}
-\end{cventries}
-
-\vspace*{-1ex}
-\cvsection{Projects}
-\vspace*{-2ex}
-\begin{projects}
-    % \project {DuolingoAnalysis}
-    % {R, Python, Clustering (hierarchical), AdaBoost, RandomForest, Visualization}
-    % {Cleaning, Visualizing, and Modeling raw data in order to extract user personas}
-    % {http://analysis.wolff.sh}
-    % {(analysis.wolff.sh)}   
-        
-    \project {TwitterScraper \textit{(33 stars)}}
-    {Python, Tweepy, Selenium, BeautifulSoup}
-    {Bypass limit on Twitter API tweet retrieval by programmatically scraping the web}
-    {http://scraper.wolff.sh}
-    {(scraper.wolff.sh)}
-    
-    % \project {AniClustering}
-    % {R, PCA, Clustering (k-means, GMM), Visualization}
-    % {Making TV recommendations based on show ratings, using PCA and clustering}
-    % {http://wolff.sh/AniClustering}
-    % {(wolff.sh/AniClustering)}
-    
-    \project {@MarkovChainer: Twitter Bot}
-    {Python, TwitterAPI, N-Gram Natural Language Model, Markov Chains}
-    {Markov Model that emulates a certain president's tweeting-style. Peep it at}
-    {http://twitter.com/MarkovChainer}
-    {@MarkovChainer}
-    
-    \project {Pneumonia CNN}
-    {TensorFlow, Transfer learning, Convolutional Neural Network, Python}
-    {Convolutional Network that can diagnose pneumonia from radiographs with 82\% accuracy}
-    {http://pneumonia.wolff.sh}
-    {(pneumonia.wolff.sh)}
-    
-    % \project {AutoPilot}
-    % {C++, Catkin/ROS, Python, Analytical Geometry}
-    % {Designed intelligent path-correction for a robot that switches between human and machine control.}
-    % {}
-    % {}
-    
-\end{projects}
-
-\vspace*{-1ex}    
-\cvsection{Leadership \& Activities}
-\vspace*{-2ex}    
-\begin{skills}
-    \skill{Founder + President, UW Data Science Club --
-    (\href{http://DotDataScience.org}{\textit{DotDataScience.org}}) [80 active members]\\}
-    {\vspace*{-2.5ex}
-    \begin{itemize}[noitemsep, label=\bullet]
-        \item Formed club devoted to exploring topics in Data Science through guest speakers and group projects
-        \item Organized and led weekly meetings and workshops on Data Science concepts and professional skills
-        % \item Interfaced with professors, researchers, and companies to facilitate lectures and opportunities for students
-    \end{itemize}
-    \vspace*{-3.5ex}}
-    
-    % \skill{Member, CMU Data Science Club}{Attends talks and workshops on Data Science topics and skills}
-    
-    \skill{Tutor, Computer Sciences}{Tutored students in computer science topics and languages @ CMU and UW-Madison}
-    
-    % \skill{Executive Board, Undergraduate Genetics Association}{3-year member, secretary and club outreach officer }
-    
-    % \skill{Inter-Collegiate Programmer, ICPC}{Top 20\% in state-wide, inter-collegiate competitive programming competition }
-    
-    % \skill{Hacker, UW Hackathon Club}{Competed internationally at \textit{HackMIT}, \textit{HackHarvard}, and Canada's \textit{Hack the North}}
-    
-    % \skill{Team Lead - Badger Volunteers}
-    % {2-year member, volunteered weekly to tutor under-privileged children aged 7-15}
-    
-    \skill{Eagle Scout - Boy Scouts of America}
-    {60+ merit badges, 3 palms, \& 100+ hours of service and served as Den Leader}
-\end{skills}
+%-------------------------------------------------------------------------------
 \end{document}
